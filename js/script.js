@@ -136,8 +136,20 @@ function getAndAppendMiddleLetter(string) {
   return middle + swapCapAndAppend(string);
 }
 
+/* Given a string, returns a string with the characters reversed. Must include punctuation. Ex: given string "hello world.", returns string "dlrow olleh.". */
+function reverseString(string) {
+  var len = string.length;
+  var count = 2;
+  reverse = string.charAt(len - count);
+  for (count = 3; count < len + 1; count++) {
+    reverse = reverse + string.charAt(len - count);
+    console.log(reverse);
+  }
+  return reverse + ".";
+}
+
 var userSentence = prompt("Hello there, please finish the following sentence: Jonny went to market and ");
 
-userSentence = getAndAppendMiddleLetter(userSentence);
+userSentence = reverseString(userSentence);
 
 console.log(userSentence);
