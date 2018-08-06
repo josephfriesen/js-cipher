@@ -57,10 +57,10 @@ var userHeight = parseInt(prompt("Let's calculate your Body Mass Index. Please e
 var userWeight = parseInt(prompt("Now, please enter your weight (in pounds)(we'll never tell)."));
 
 var userBMI = calculateBMI(userHeight, userWeight).toFixed(2);
-var userBMIString = userBMI.toString;
+var userBMIString = userBMI.toString();
 
 alert("Your Body Mass Index is " + userBMI + ".");
-*/
+ */
 
 
 
