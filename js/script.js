@@ -49,8 +49,12 @@ function reverseString(string) {
   var len = string.length;
   var count = 2;
   reverse = string.charAt(len - count);
+  var disp = count - 1;
+  console.log("At step " + disp.toString() + " of reversal, the string 'reverse' is: " + reverse);
   for (count = 3; count < len + 1; count++) {
     reverse = reverse + string.charAt(len - count);
+    disp = count - 1;
+    console.log("At step " + disp.toString() + " of reversal, the string 'reverse' is: " + reverse);
   }
   return reverse + ".";
 }
@@ -80,8 +84,9 @@ alert("The translated sentence is: " + userSentence);
 
 
 
-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 The following functions were written for the earlier exercises and do not pertain to the cipher.
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 
 
