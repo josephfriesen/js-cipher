@@ -87,3 +87,18 @@ var userMillilitresStr = userMillilitres.toString();
 
 alert(userCups.toString() + " cups is equal to " + userMillilitresStr + " millilitres.");
 */
+
+function capitalizeFirstAndLast(string) {
+  var len = string.length;
+  var firstLetter = string.charAt(0).toUpperCase();
+  var lastLetter = string.charAt(len-2).toUpperCase();
+  string = firstLetter + string.slice(1, len);
+  string = string.slice(0, len-2) + lastLetter + ".";
+  return string;
+}
+
+var userSentence = prompt("Hello there, please finish the following sentence: Jonny went to market and ");
+
+userSentence = capitalizeFirstAndLast(userSentence);
+
+console.log(userSentence);
