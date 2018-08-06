@@ -74,3 +74,16 @@ var celsiusString = convertFToC(fahrenheit).toString();
 
 alert("Your tempurature in Celcius is " + celsiusString + ".");
 */
+
+/* COVERT CUPS TO MILLILITRES FUNCTION
+var cupsToMillilitres = function(cups) {
+	return cups * 236.588;
+};
+
+var userCups = parseFloat(prompt("Let's convert a quantity of cups to millilitres. What volume of cups do you have that you would like converted to millilitres?"));
+
+var userMillilitres = cupsToMillilitres(userCups).toFixed(2);
+var userMillilitresStr = userMillilitres.toString();
+
+alert(userCups.toString() + " cups is equal to " + userMillilitresStr + " millilitres.");
+*/
