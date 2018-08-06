@@ -143,13 +143,19 @@ function reverseString(string) {
   reverse = string.charAt(len - count);
   for (count = 3; count < len + 1; count++) {
     reverse = reverse + string.charAt(len - count);
-    console.log(reverse);
   }
   return reverse + ".";
 }
 
+/* Put it all together. Append the middle letter of the string to the beginning, append the reversed, capitalized first and last letter pair to the end, then reverses the entire string. Ex: given string "hi world.", return the string "HDdlrow ihw." */
+function putItAllTogether(string) {
+  string = getAndAppendMiddleLetter(string);
+  string = reverseString(string);
+  return string;
+}
+
 var userSentence = prompt("Hello there, please finish the following sentence: Jonny went to market and ");
 
-userSentence = reverseString(userSentence);
+userSentence = putItAllTogether(userSentence);
 
 console.log(userSentence);
