@@ -127,8 +127,17 @@ function swapCapAndAppend(string) {
   return string.slice(0,len-1) + twolet + "."
 }
 
+/* Given a string, returns a string with the previous function applied while also appending the letter in the position midway through the sentence (rounded down) to the beginning of the string. Must include punctuation. Ex: given string "hi world.", return string "whi worldDH." (as this string is 9 characters long, gets the character in the 4th position, which is "w", and concatenates that letter to the beginning of the string.) */
+function getAndAppendMiddleLetter(string) {
+  var len = string.length;
+  var half = len / 2;
+  var halfround = Math.floor(half);
+  var middle = string.charAt(halfround - 1);
+  return middle + swapCapAndAppend(string);
+}
+
 var userSentence = prompt("Hello there, please finish the following sentence: Jonny went to market and ");
 
-userSentence = swapCapAndAppend(userSentence);
+userSentence = getAndAppendMiddleLetter(userSentence);
 
 console.log(userSentence);
